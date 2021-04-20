@@ -11,7 +11,7 @@
     </div>
 
     <div
-        class="app__timer"
+        class="app__activation"
         v-if="state === STATES.activation"
     >
       <Activation
@@ -21,7 +21,7 @@
     </div>
 
     <div
-        class="app__timer"
+        class="app__birthday"
         v-if="state === STATES.birthday"
     >
       <Birthday/>
