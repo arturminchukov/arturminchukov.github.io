@@ -15,7 +15,7 @@
         v-if="state === STATES.activation"
     >
       <Activation
-          pass-phrase="YES"
+          pass-phrase="I LOVE DANCING"
           @complete="onCompletePassphrase"
       />
     </div>
