@@ -1,5 +1,8 @@
 <template>
   <div class="birthday">
+    <div class="birthday__label birthday__hint">
+      Включи звук!
+    </div>
     <div class="birthday__poem birthday__label">
       Be the best you can be,<br>
       Imagine what you can do,<br>
@@ -12,15 +15,23 @@
     </div>
     <img src="../assets/Lovely-Happy-Birthday-Animated-GIF-image.gif">
     <p class="birthday__gift birthday__label">
-      Вообщем ничего лучше чем оставить тебе свои наушники я и не придумал,<br>
-      Теперь они по праву твои, если конечно же ты ими пользуешься =)
+      Вообщем, ничего лучше, чем оставить тебе свои наушники я и не придумал,<br>
+      Теперь они по праву твои, если, конечно же, ты ими пользуешься =)
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Birthday'
+  name: 'Birthday',
+  mounted() {
+    document.addEventListener('scroll', this.handleScroll);
+  },
+  methods:{
+    handleScroll(){
+
+    }
+  }
 };
 </script>
 
@@ -31,6 +42,11 @@ export default {
   justify-content: flex-start;
   align-items: center;
 
+}
+
+
+.birthday__hint {
+  font-size: 42px;
 }
 
 .birthday__label {

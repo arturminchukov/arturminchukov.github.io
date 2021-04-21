@@ -33,6 +33,7 @@
 import Timer from './components/Timer.vue';
 import Activation from './components/Activation.vue';
 import Birthday from './components/Birthday.vue';
+import song from './assets/Ravenscode_My_Escape.mp3';
 
 const STATES = {
   timer: 0,
@@ -66,6 +67,8 @@ export default {
       this.state = STATES.activation;
     },
     onCompletePassphrase(){
+      const audio = new Audio(song);
+      audio.play();
       this.state = STATES.birthday;
     }
   }
